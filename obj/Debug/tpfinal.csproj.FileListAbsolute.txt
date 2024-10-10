@@ -10,9 +10,6 @@ C:\Users\piuliano\Desktop\CTEDA\CTEDA 2024 2do\TPFinal_sharpdevelop_base\WiW\obj
 C:\Users\piuliano\Desktop\CTEDA\CTEDA 2024 2do\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.csproj.GenerateResource.Cache
 C:\Users\piuliano\Desktop\CTEDA\CTEDA 2024 2do\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.exe
 C:\Users\piuliano\Desktop\CTEDA\CTEDA 2024 2do\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.pdb
-C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\bin\Debug\tpfinal.exe.config
-C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\bin\Debug\tpfinal.exe
-C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\bin\Debug\tpfinal.pdb
 C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.csprojResolveAssemblyReference.cache
 C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.Form1.resources
 C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.Form2.resources
@@ -21,4 +18,7 @@ C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpf
 C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.ListItem.resources
 C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.csproj.GenerateResource.Cache
 C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.exe
+C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\bin\Debug\tpfinal.exe.config
+C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\bin\Debug\tpfinal.exe
+C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\bin\Debug\tpfinal.pdb
 C:\Users\USUARIO\OneDrive\Escritorio\TPFinal_sharpdevelop_base\WiW\obj\Debug\tpfinal.pdb
