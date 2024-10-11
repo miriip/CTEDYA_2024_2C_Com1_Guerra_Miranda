@@ -51,11 +51,6 @@ namespace tpfinal
 
 
 
-        private string ImprimirProcesoConNivel(Proceso p, int nivel)
-    	{
-        	return "Nivel " + nivel + ": " + "Nombre: " + p.nombre + " Tiempo: " + p.tiempo + " Prioridad: " + p.prioridad + "\n";
-    	}
-
     	public string Consulta3(List<Proceso> datos)
     	{
         	string resultado = "";
@@ -80,7 +75,12 @@ namespace tpfinal
         	}
 
         	return resultado;
-    	}	
+    	}
+
+		private string ImprimirProcesoConNivel(Proceso p, int nivel)
+    	{
+        	return "Nivel " + nivel + ": " + "Nombre: " + p.nombre + " Tiempo: " + p.tiempo + " Prioridad: " + p.prioridad + "\n";
+    	}    	
 
 
       
@@ -163,16 +163,16 @@ namespace tpfinal
 		{
     		// Limpiar la salida
     		collected.Clear();
-    
+
     		// Estructura de datos auxiliar: MaxHeap
     		var maxHeap = new List<Proceso>(datos);
-    
-   		 	// Convertir la lista en un MaxHeap aplicando buildHeap desde la mitad hacia atrás
+
+    		// Convertir la lista en un MaxHeap aplicando buildMaxHeap desde la mitad hacia atrás
     		for (int i = maxHeap.Count / 2 - 1; i >= 0; i--)
     		{
         		buildMaxHeap(maxHeap, i);
     		}
-    
+
     		// Extraer elementos del MaxHeap y añadirlos a 'collected' en orden
     		while (maxHeap.Count > 0)
     		{
@@ -180,60 +180,62 @@ namespace tpfinal
         		collected.Add(ExtraerMax(maxHeap));
     		}
 		}
+        
 
 		// Función para construir el MaxHeap, ajusta el árbol si es necesario
 		private void buildMaxHeap(List<Proceso> heap, int i)
 		{
     		int n = heap.Count; // Número de elementos en el heap
-    		int menor = i;  // Inicializar el nodo como menor
+    		int mayor = i;  // Inicializar el nodo como mayor
 
     		while (true)
     		{
-        		int izq = 2 * menor + 1;  // Hijo izquierdo
-        		int der = 2 * menor + 2;  // Hijo derecho
-        		int actual = menor;  // Nodo actual a comparar
+        		int izq = 2 * mayor + 1;  // Hijo izquierdo
+        		int der = 2 * mayor + 2;  // Hijo derecho
+        		int actual = mayor;  // Nodo actual a comparar
 
-        		// Comparar el nodo actual con su hijo izquierdo
-        		if (izq < n && heap[izq].tiempo < heap[actual].tiempo)
+        		// Comparar el nodo actual con su hijo izquierdo según la prioridad
+        		if (izq < n && heap[izq].prioridad > heap[actual].prioridad)
         		{
             		actual = izq;
         		}
 
-        		// Comparar el nodo actual con su hijo derecho
-        		if (der < n && heap[der].tiempo < heap[actual].tiempo)
+        		// Comparar el nodo actual con su hijo derecho según la prioridad
+        		if (der < n && heap[der].prioridad > heap[actual].prioridad)
         		{
             		actual = der;
         		}
 
         		// Si no se requiere más intercambio, salir del ciclo
-        		if (actual == menor)
+        		if (actual == mayor)
         		{
             		break;
         		}
 
-        		// Intercambiar el nodo actual con el menor hijo
-        		var temp = heap[menor];
-        		heap[menor] = heap[actual];
+        		// Intercambiar el nodo actual con el mayor hijo
+        		var temp = heap[mayor];
+        		heap[mayor] = heap[actual];
         		heap[actual] = temp;
 
-        		// Actualizar el índice 'menor' para continuar ajustando
-        		menor = actual;
+        		// Actualizar el índice 'mayor' para continuar ajustando
+        		mayor = actual;
     		}
 		}
+		
 
 		// Función para extraer el máximo elemento (la raíz) del MaxHeap
-        private Proceso ExtraerMax(List<Proceso> heap)
-        {
-            var max = heap[0];
-            heap[0] = heap[heap.Count - 1];
-            heap.RemoveAt(heap.Count - 1);
+		private Proceso ExtraerMax(List<Proceso> heap)
+		{
+    		var max = heap[0];
+    		heap[0] = heap[heap.Count - 1];
+    		heap.RemoveAt(heap.Count - 1);
 
-            if (heap.Count > 0)
-            {
-                buildMaxHeap(heap, 0);
-            }
+    		if (heap.Count > 0)
+    		{
+        		buildMaxHeap(heap, 0);
+    		}
 
-            return max;
-        }
-    }
+    		return max;
+		}
+   }
 }
