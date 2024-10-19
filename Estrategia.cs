@@ -133,7 +133,7 @@ namespace tpfinal
         		heap[menor] = temp;
 
         		// Continuar ajustando el heap desde la nueva posición
-        		buildMinHeap(heap,menor);	
+        		buildMinHeap(heap,menor);  // <------Esta instruccion es una llamada recursiva, actualizando el parametro con el menor seleccionado.	
     		}
 		}
 
@@ -150,7 +150,7 @@ namespace tpfinal
     		// Restaurar la propiedad del MinHeap usando buildHeap
             if (heap.Count > 0)
             {
-                buildMinHeap(heap, 0); // Ajustar el nuevo heap
+                buildMinHeap(heap, 0); // Ajustar el nuevo heap 
             }
 
             return min;
