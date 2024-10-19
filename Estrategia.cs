@@ -43,7 +43,6 @@ namespace tpfinal
         	// Calcular la altura de la heap utilizando Math.Log
         	int altura = (int)Math.Log(datos.Count, 2);
 
-        	// Formatear el resultado para que sea legible
         	string resultado = "La Altura de la Heap es: " + altura;
 
         	return resultado;
@@ -217,7 +216,7 @@ namespace tpfinal
         		heap[mayor] = heap[actual];
         		heap[actual] = temp;
 
-        		// Actualizar el índice 'mayor' para continuar ajustando
+        		// Actualizar el índice "mayor" para continuar ajustando
         		mayor = actual;
     		}
 		}
